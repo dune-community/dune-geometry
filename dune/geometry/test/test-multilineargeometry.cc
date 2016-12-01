@@ -104,7 +104,6 @@ static bool testMultiLinearGeometry ( Dune::Transitional::ReferenceElement< ctyp
     Dune::FieldVector<ctype, mydim> local(refElement.position(c, mydim));
     Dune::FieldVector<ctype, cdim> global(geometry.global(local));
     Dune::FieldVector<ctype, mydim> local2(geometry.local(global));
-
     if (local2 != local2) {
       std::cerr << "Error: at corner " << c << " local returned NaN: "
                 << local2 << std::endl;
