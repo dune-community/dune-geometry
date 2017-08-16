@@ -225,6 +225,7 @@ namespace Dune
       template< int n >
       static void cholesky_L ( const FieldMatrix< ctype, n, n > &A, FieldMatrix< ctype, n, n > &ret )
       {
+        using std::sqrt;
         for( int i = 0; i < n; ++i )
         {
           ctype &rii = ret[ i ][ i ];
